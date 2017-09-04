@@ -33,9 +33,9 @@ var help = ({preload: preload, update: update, create: create});
     function create()
     {
         help.stage.backgroundColor = "#fff";
-        StringText = help.add.text(help.world.centerX-200,help.world.centerY-400,'HELP MENU ', { font: '84px Arial', fill: '#0892d0' });
+        StringText = help.add.text(help.world.centerX-200,help.world.centerY-380,'HELP MENU ', { font: '84px Arial', fill: '#0892d0' });
         StringText.alpha = 0;
-        StringText2 = help.add.text(help.world.centerX-500,help.world.centerY-200,'To play this game, you must follow these\n\simple instructions,\ if you are on a computer\n\ use the arrow keys "LEFT" and "RIGHT"\n\ for movement,and "SPACE" to fire your guns\n\else\ if you are on a Mobile device use\n\
+        StringText2 = help.add.text(help.world.centerX-500,help.world.centerY-200,'To play this game, you must follow these\n\simple instructions,\ if you are on a computer\n\ use the arrow keys "LEFT" and "RIGHT"\n\for movement,and "SPACE" to fire your guns\n\if you are on a Mobile device use\n\
 the Touch Controls and Tap the Screen to Fire\n\
 and **also please try to play the game at a *SLOW* pace!', 
         { font: '42px Arial', fill: '#900000' });
