@@ -7,7 +7,7 @@
 /* global Phaser */
 
 //Phaser.Game((window.innerWidth*2), (window.innerHeight*2)
-var Main = new Phaser.Game((window.innerWidth), (window.innerHeight),Phaser.CANVAS,'',
+var Main = new Phaser.Game(window.screen.width,window.screen.height,Phaser.CANVAS,'canvas',
 {preload: preload, update: update, create: create });
 
     var width = window.innerWidth;
@@ -36,9 +36,12 @@ var Main = new Phaser.Game((window.innerWidth), (window.innerHeight),Phaser.CANV
         
        
         
-        this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
-        this.stage.scale.pageAlignHorizaontally = true;
-        this.stage.scale.pagelignVertically = true;
+        this.stage.smoothed = true;
+        this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;   
+        this.scale.scaleMode.forceLandscape = true;
+        this.scale.pageAlignVertically = true;
+        this.scale.pageAlignHorizontally = true;
+        this.scale.refresh();
         
         
         
@@ -59,8 +62,8 @@ var Main = new Phaser.Game((window.innerWidth), (window.innerHeight),Phaser.CANV
     
         background_image = Main.add.image(0,0,'robot');
         background_image.anchor.setTo(0.01,0.01);
-        background_image.height = Main.height;
-        background_image.width = Main.width;
+        background_image.height = window.screen.availHeight+50;
+        background_image.width = window.screen.availWidth+25;
         
         
         fx = Main.add.audio('freeze');

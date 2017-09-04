@@ -16,8 +16,8 @@ var help = ({preload: preload, update: update, create: create});
 
         
         this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
-        this.stage.scale.pageAlignHorizaontally = true;
-        this.stage.scale.pagelignVertically = true;
+        //this.stage.scale.pageAlignHorizaontally = true;
+        //this.stage.scale.pagelignVertically = true;
         
         this.state.start(this);
         
