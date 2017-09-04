@@ -340,9 +340,7 @@ function collisionHandler (bullet, alien) {
         scoreText.text = scoreString + score;
 
         enemyBullets.callAll('kill',this);
-        stateText.text = "HORRAY!! YOU'VE WON!!\n\
-Now go show the world what your made of!!\n\
-Click to restart!";
+        stateText.text = "HORRAY!! YOU'VE WON!!\n\ Click to restart!";
         level.add.tween(stateText).to({alpha: 1}, 1600, Phaser.Easing.Linear.None, true, 
         0, 100, true); 
         stateText.visible = true;
@@ -357,7 +355,7 @@ Click to restart!";
     
     if(score === 50) //this checks if the number of enimes is a multiple of 10
     {
-        infoText1.text = "Here are some Computer Science \n\Tips and advice to think about,\n\while you try to enjoy the game and\n\ try to get a high Score!";
+        /*infoText1.text = "Here are some Computer Science \n\Tips and advice to think about,\n\while you try to enjoy the game and\n\ try to get a high Score!";
         infoText1.visible = true;
         infoText1.fontWeight = 'bold';
         projection = level.add.sprite(level.world.centerX,level.world.centerY, 'projection');
@@ -375,12 +373,14 @@ Click to restart!";
         level.input.onTap.addOnce(UnPause);
     
         //I changed the Firebutton in this context to unpause as a posed to firing
-        fireButton.onDown.add(UnPause); 
+        fireButton.onDown.add(UnPause);
+        
+        */
         
      }
      if(score === 100)
      {
-        infoText2.text = "Math is all over Computer Science in many different ways.\n\
+     /*  infoText2.text = "Math is all over Computer Science in many different ways.\n\
 \n\Software Engineers will use discrete math when working out\n\
 algorithm complexity and efficiency in graph theory, and recursion.\n\
 People who work more directly with hardware will use discrete math in \n\
@@ -406,11 +406,13 @@ creating 3D environments. ";
         
         //I changed the Firebutton in this context to unpause as a posed to firing
         fireButton.onDown.add(UnPause); 
+        
+        */
      }
     
     if(score === 150)
     {
-        infoText3.text = "Don't Procrastinate \n\
+       /* infoText3.text = "Don't Procrastinate \n\
 \n\We know you've heard it a million times, \n\
 but this is the worst possible thing you can do in a programming class. \n\
 When you get an assignment, look it over and start on it right away. \n\
@@ -432,10 +434,14 @@ the problem. ";
         
         //I changed the Firebutton in this context to unpause as a posed to firing
         fireButton.onDown.add(UnPause); 
+        
+        */
     }
     
     if(score === 200)
     {
+        
+        /*
         infoText4.text = "Don't Overcomplicate\n\
 \n\Things The smaller a block of code is, without being redundant of other code, \n\
 the better. When you break down algorithms which have nothing in common, \n\
@@ -461,9 +467,12 @@ standard 800x600 monitor view. If you comment well, a little larger is acceptabl
         
         //I changed the Firebutton in this context to unpause as a posed to firing
         fireButton.onDown.add(UnPause); 
+        
+        */
       }
     if(score === 250)
      {
+         /*
         infoText5.text = "Impress Your Instructors, But Not Too Much :)\n\
 \n\Your instructor can be your best friend, but don't be a suck up.\n\
 Ask questions and show your instructor you're interested but \n\
@@ -485,10 +494,13 @@ that relationship in the future for internships and recommendations.";
         
         //I changed the Firebutton in this context to unpause as a posed to firing
         fireButton.onDown.add(UnPause); 
+        
+        */
       }
 
      if(score === 300)
      {
+        /*
        infoText6.text = "Use All Your Resources\n\
 \n\Don't hit a road block and then panic. There are \n\
 thousands of resources online to help you work through \n\
@@ -514,10 +526,14 @@ do the work for you though, you'll still have to put forth some effort."
         
         //I changed the Firebutton in this context to unpause as a posed to firing
         fireButton.onDown.add(UnPause); 
+        
+        */
       }
     
      if(score === 350)
      {
+         
+         /*
         infoText7.text = "Make Sure This is What You Want to Do\n\
 \n\Many computer science students get into CS because they like games. \n\
 Now there are a lot of positions in Computer Game Design that do not \n\
@@ -541,6 +557,7 @@ to know the CS majors."
         
         //I changed the Firebutton in this context to unpause as a posed to firing
         fireButton.onDown.add(UnPause); 
+        */
       } 
     
   
@@ -659,6 +676,7 @@ function restart () {
 
     //revives the player
     player.revive();
+    score = 0;
     //hides the text
     stateText.visible = false;
 

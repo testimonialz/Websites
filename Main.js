@@ -7,8 +7,9 @@
 /* global Phaser */
 
 //Phaser.Game((window.innerWidth*2), (window.innerHeight*2)
-var Main = new Phaser.Game((window.innerWidth), (window.innerHeight),Phaser.CANVAS,'',
-{preload: preload, update: update, create: create });
+var Main = new Phaser.Game(window.screen.width,
+window.screen.height, Phaser.CANVAS,'canvas',
+{preload: preload, update: update, create: create});
 
     var width = window.innerWidth;
     var height = window.innerHeight;
@@ -35,8 +36,8 @@ var Main = new Phaser.Game((window.innerWidth), (window.innerHeight),Phaser.CANV
         Main.state.add('help1',help);
         
        
-        
         this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
+        this.scale.scaleMode.forceLandscape = true;
         this.stage.scale.pageAlignHorizaontally = true;
         this.stage.scale.pagelignVertically = true;
         
@@ -56,7 +57,7 @@ var Main = new Phaser.Game((window.innerWidth), (window.innerHeight),Phaser.CANV
     function create()
     {   
         
-    
+        
         background_image = Main.add.image(0,0,'robot');
         background_image.anchor.setTo(0.01,0.01);
         background_image.height = Main.height;
