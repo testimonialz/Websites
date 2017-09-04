@@ -16,9 +16,9 @@ var help = ({preload: preload, update: update, create: create});
 
         
         this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
-        //this.stage.scale.pageAlignHorizaontally = true;
-        //this.stage.scale.pagelignVertically = true;
- 
+        this.stage.scale.pageAlignHorizaontally = true;
+        this.stage.scale.pagelignVertically = true;
+        
         this.state.start(this);
         
     }
@@ -32,10 +32,6 @@ var help = ({preload: preload, update: update, create: create});
     
     function create()
     {
-        
-        help.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
-        help.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        
         help.stage.backgroundColor = "#fff";
         StringText = help.add.text(help.world.centerX-200,help.world.centerY-400,'HELP MENU ', { font: '84px Arial', fill: '#0892d0' });
         StringText.alpha = 0;
