@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<!-- start of head -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+<!-- this script is for after the page loads-->
+<script>
+var snd = new Audio("Sound/voice1.mp3");
+$(document).ready(function()
+{
+       $("#div1").fadeIn(3000);
+       
+       <!-- button play animation -->
+       $("a").animate({
+            left: '4px',
+            opacity: '-=0.3',
+        });
+    
+       <!-- play sound for button -->
+        $("a").click(function(){
+        snd.play();
+    });
+});
+</script>
+
+<style>
+#hovering:hover
+{
+   -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+   background-color:skyblue;
+}
+
+/* rezises any image to fit any screen */
+img
+{
+    max-width: 100%;
+}
+
+edit
+{
+    max-with: 100%;
+    max-height: 100%;
+}
+
+</style>
+<!-- start of my game/presentation here -->
+</head>
+<!-- End of head -->
+
+<!-- Body starts here -->
+<body>
+    
+<div data-role="My Project" style = "background-color: #E6E6FA">
+
+  <div id = "div1" data-role="Interaction 1" style = "display:none;" >
+     
+      <center> <img src ="Image/welcome.png"> </center>
+  </div>
+
+  <div data-role= "main" class= "ui-content" style="color:black" align="center">
+      <h4 style="color:skyblue"> Written by: </h4> Maurice Tracey 
+      
+  </div>
+
+  <!--pictures and information should go into this footer -->
+  <div data-role="footer" style="padding:80px 0px 80px 0px;font-size: 150%">
+      <center> <h2> Welcome to my website, 
+        please <span style="color:blueviolet;font-style:italic"> Click the Button </span> below  </h2>
+    <h2> which will take you directly to the game, 
+        please advise that this is my
+        first App,</h2> 
+    <h2> please enjoy 
+        and tell your friends :) </h2>
+          </center>
+   
+  </div>
+
+  <div data-role="footer" style="background-color:lavenderblush;
+       display:inline-block">
+
+      <img  width = "28%" id = "edit" src = "Image/futuretech.jpg">
+      <img width = "32.5%" id = "edit" src = "Image/codepic.jpeg">
+      <img width ="32.5%"  id = "edit" src = "Image/watchpic.jpg"> 
+      
+  </div>
+ 
+  <!-- between footer text and play button -->
+  <div class="ui-content" style="background-color:whitesmoke; 
+       padding:80px 0px 80px 0px" > </div>
+ 
+       
+     
+       
+ <div align="center" data-role="footer">
+      
+       
+       <a id="hovering" href="newhtml.html" data-transition="flow"
+          style="font-size: 24px;" 
+          target = "_blank" > Click to Play </a>
+  </div>
+  
+    <div class="ui-content" style="background-color:#E6E6FA; 
+       padding:80px 0px 80px 0px" > </div>
+       
+  </div>
+   
+
+</body>
+</html>
